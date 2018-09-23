@@ -204,28 +204,33 @@ h2	{
 	padding-bottom: 3%;
 }
 
-.tube	{
+/*.tube	{
 	float: left;
 	width: 50%;
+}*/
+
+.tube	{
+	margin-top: 2%;
+	position: relative;
+	width: 33.1%;
+	display: inline-block;
+	height: 680px;
+	overflow: hidden;
 }
 
 .title	{
 	padding: 2%;
-	margin-top: 4%;
 	width: 25%;
 	text-align: center;
-	margin-left: 50%;
-	margin-right: 50%;
+	margin-left: 30%;
 	margin-bottom: 4%;
 }
 
 .title_2	{
 	padding: 2%;
-	margin-top: 4%;
-	width: 25%;
+	width: 30%;
 	text-align: center;
-	margin-left: 50%;
-	margin-right: 50%;
+	margin-left: 30%;
 	margin-bottom: 4%;
 	color: white;
 }
@@ -237,19 +242,17 @@ h2	{
 }
 
 .maidens	{
-	text-align: center;
 	position: relative;
 }
 
 .circle	{
 	position: absolute;
 	top: 15%;
-	left: 10%;
+	left: 50%;
 	border-radius: 50%;
 	height: 100px;
 	width: 100px;
 	margin: 0;
-	margin-left: 54%;
 }
 
 .circle_2	{
@@ -259,12 +262,12 @@ h2	{
 	height: 100px;
 	width: 100px;
 	margin: 0;
-	left: 47%;
+	left: 21%;
 }
 
 .name {
 	top: 72.5%;
-	left: 40%;
+	left: 10%;
 	position: absolute;
 	font-family: 'Cookie', cursive;
 	font-size: 150%;
@@ -272,7 +275,7 @@ h2	{
 
 .name_2 {
 	top: 72.5%;
-	left: 70%;
+	left: 55%;
 	position: absolute;
 	font-family: 'Cookie', cursive;
 	font-size: 150%;
@@ -285,34 +288,197 @@ h2	{
 .line {
 	height: 60px;
 	width: 5px;
-	margin-left: 61.5%;
-	margin-right: 38.5%;
+	margin-left: 45%;
 }
 
 .line_3 {
 	height: 100px;
 	width: 5px;
-	margin-left: 61.5%;
-	margin-right: 38.5%;
+	margin-left: 45%;
 }
 
 .line_2 {
 	height: 5px;
 	width: 30px;
-	margin-left: 61.5%;
-	margin-right: 38.5%;
+	margin-left: 45%;
 }
 
 .line_4 {
 	height: 5px;
 	width: 30px;
-	margin-left: 58.25%;
+	margin-left: 40%;
 }
 
 .dowden 	{
 	background-color: black;
 	font-family: 'Cookie', cursive;
 	font-size: 200%;
+}
+
+.tube_symbol	{
+	height: 100px;
+	margin-top: 10%;
+	margin-right: 2%;
+}
+
+h4	{
+	margin-top: 10%;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 5%;
+	font-family: 'Oswald', sans-serif;
+	font-size: 250%;
+}
+
+.whiteboard p {
+	margin-top: 5%;
+	font-family: 'Bad Script', cursive;
+	font-size: 175%;
+	padding-top: 10%;
+	line-height: 130%;
+}
+
+.hidden	{
+	display: none;
+}
+
+#lineup	{
+	display: block;
+	height:200px;
+	visibility: hidden;
+	margin-top: -200px;
+}
+
+#rsvp	{
+	display: block;
+	height:200px;
+	visibility: hidden;
+	margin-top: -200px;
+}
+
+#location	{
+	display: block;
+	height:200px;
+	visibility: hidden;
+	margin-top: -200px;
+}
+
+#accomodation	{
+	display: block;
+	height:200px;
+	visibility: hidden;
+	margin-top: -200px;
+}
+
+#gifts	{
+	display: block;
+	height:200px;
+	visibility: hidden;
+	margin-top: -200px;
+}
+
+h5	{
+	display: inline;
+	font-family: 'Cookie', cursive;
+	font-size: 300%;
+	padding: 2%;
+	margin-top: 5%;
+}
+
+.generaltext {
+	font-size: 150%;
+	line-height: 120%;
+	padding-left: 5%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.cartext	{
+	padding-top: 1%;
+	padding-bottom: 1%;
+	padding-left: 1%;
+	font-size: 150%;
+}
+
+.adress 	{
+	text-align: center;
+	font-size: 175%;
+	padding-top: 2%;
+}
+.car {
+	height:40px;
+}
+
+.bus {
+	height:30px;
+	padding-left: 5%;
+}
+
+.train {
+	height:30px;
+	padding-left: 5%;
+}
+
+.taxi {
+	height:30px;
+	padding-left: 5%;
+}
+
+.boat {
+	height:30px;
+	padding-left: 5%;
+}
+
+.transport {
+	padding-top: 2.5%;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+#map {
+	margin-top: 2.5%;
+	margin-bottom: 2.5%;
+	width: 100%;
+	height: 400px;
+}
+
+.hotel {
+	height:30px;
+	padding-left: 5%;
+}
+
+.accomodation ul 	{
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
+}
+
+.accomodation a 	{
+	color: gray;
+}
+
+.rsvp p {
+	text-align: center;
+}
+
+.rsvp span 	{
+	font-weight: bold;
+}
+
+.under_construction	{
+	width: 20%;
+	margin-left: 45%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+footer	{
+	height: 150px;
+	background-image: url(../images/footer.png);
+	background-repeat: repeat-x;
+	background-size: 33.33% 100%;
+	width: 100%;
 }
 
 /*form	{
