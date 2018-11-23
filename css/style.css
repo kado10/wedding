@@ -50,7 +50,7 @@ nav	{
 	height: 200px;
 	background-image: url(../images/black_border_3.gif);
 	background-repeat: repeat-x;
-	background-size: 33.333% 100%;
+	background-size: contain;
 	margin-bottom: 2.5%;
 	position: fixed;
 	top: 0;
@@ -119,60 +119,64 @@ h2	{
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
-	padding-bottom: 5%;
+	padding-bottom: 25px;
+	padding-top: 25px;
+	text-align: center;
 }
 
-.red_pin {
+.photos > div {
+	display: inline-block;
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+.pin {
 	display: block;
 	background: #DC143C;
 	border-radius: 50%;
 	height: 30px;
 	width: 30px;
-	margin: 0;
+	margin: 0 auto;
+}
+
+.red_pin {
+	background: #DC143C;
 	background: radial-gradient(circle at 10px 10px, #DC143C, #000);
-	margin-left: 40%;
-	margin-right: 60%;
 }
 
 .green_pin {
-	display: block;
 	background: #8FBC8F;
-	border-radius: 50%;
-	height: 30px;
-	width: 30px;
-	margin: 0;
 	background: radial-gradient(circle at 10px 10px, #8FBC8F, #000);
-	margin-left: 40%;
-	margin-right: 60%;
 }
 
 .blue_pin {
-	display: block;
 	background: #B0C4DE;
-	border-radius: 50%;
-	height: 30px;
-	width: 30px;
-	margin: 0;
 	background: radial-gradient(circle at 10px 10px, #B0C4DE, #000);
-	margin-left: 40%;
-	margin-right: 60%;
 }
 
 .polaroid	{
 	text-align: center;
 	position: relative;
-	width: 15%;
-	height: 100%;
 	background-color: white;
-	padding-top: 1%;
 	display: inline-block;
-	margin-left: 1%;
-	padding-bottom: 1%;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	padding-top: 5px;
+	padding-right:20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+
+	-webkit-box-shadow: 0px 0px 22px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 22px 1px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 22px 1px rgba(0,0,0,0.75);
+}
+.picture {
+	position: relative;
 }
 
-.picture img	{
-	width: 90%;
-	height: 175px;
+.picture > .image	{
+	width: 145px;
+	height: 145px;
 	margin-top: 8%;
 }
 
@@ -180,28 +184,32 @@ h2	{
 	-webkit-transform:rotate(-6deg);
 	-o-transform:rotate(-6deg);
 	-moz-transform:rotate(-6deg);
-	margin-top: 2%;
 }
 
 .tilt_2	{
 	-webkit-transform:rotate(2deg);
 	-o-transform:rotate(2deg);
 	-moz-transform:rotate(2deg);
-	margin-top: 4%;
 }
 
 .tilt_3	{
 	-webkit-transform:rotate(8deg);
 	-o-transform:rotate(8deg);
 	-moz-transform:rotate(8deg);
-	margin-top: 1%;
 }
 
 .ensemble	{
+	display: none;
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
 	padding-bottom: 3%;
+}
+
+@media screen and (min-width: 1400px) {
+	.ensemble.desktop {
+		display: block;
+	}
 }
 
 /*.tube	{
@@ -210,79 +218,90 @@ h2	{
 }*/
 
 .tube	{
-	margin-top: 2%;
+	margin-top: 10px;
 	position: relative;
-	width: 33.1%;
+	width: 450px;
 	display: inline-block;
-	height: 680px;
 	overflow: hidden;
+	padding-bottom: 70px;
+	vertical-align: top;
+}
+.tube.details {
+	width: calc(100% - 917px);
+	height: 905px;
 }
 
 .title	{
-	padding: 2%;
+	padding: 6px;
 	width: 25%;
 	text-align: center;
-	margin-left: 30%;
-	margin-bottom: 4%;
+	margin-bottom: 10px;
+	font-size: 40pt;
+	font-family: 'Cookie', cursive;
+}
+.robson .title {
+	width: 200px;
+	margin-left: 106px;
 }
 
-.title_2	{
-	padding: 2%;
-	width: 30%;
-	text-align: center;
-	margin-left: 30%;
-	margin-bottom: 4%;
+.dowden .title {
+	width: 240px;
 	color: white;
+	margin-left: 84px;
 }
 
 .robson	{
-	background-color: silver;
-	font-family: 'Cookie', cursive;
-	font-size: 200%;
 }
 
 .maidens	{
 	position: relative;
+	clear: both;
+	height: 120px;
+	z-index: 2;
+}
+
+.grey {
+	background-color: silver;
+}
+.black {
+	background-color: black;
 }
 
 .circle	{
 	position: absolute;
-	top: 15%;
-	left: 50%;
+	top: 13px;
 	border-radius: 50%;
 	height: 100px;
 	width: 100px;
 	margin: 0;
+	cursor: pointer;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.robson .circle {
+	left: 233px;
+}
+.dowden .circle	{
+	left: 83px;
 }
 
-.circle_2	{
-	position: absolute;
-	margin-top: 15%;
-	border-radius: 50%;
-	height: 100px;
-	width: 100px;
-	margin: 0;
-	left: 21%;
-}
-
-.name {
-	top: 72.5%;
+.maidens .name {
+	top: calc(50% - 10px);
 	left: 10%;
 	position: absolute;
 	font-family: 'Cookie', cursive;
-	font-size: 150%;
+	font-size: 20pt;
 }
-
-.name_2 {
-	top: 72.5%;
-	left: 55%;
-	position: absolute;
-	font-family: 'Cookie', cursive;
-	font-size: 150%;
+.robson .name {
+	left: 20px;
+}
+.dowden .name {
+	left: 240px;
 }
 
 .connection	{
 	position: relative;
+	margin-top: -60px;
 }
 
 .line {
@@ -291,51 +310,59 @@ h2	{
 	margin-left: 45%;
 }
 
-.line_3 {
+.line_h {
+	height: 5px;
+	width: 30px;
+}
+.robson .line_h {
+	margin-left: 45%;
+}
+.dowden .line_h {
+	margin-left: 178px;
+}
+
+.connection .line {
 	height: 100px;
-	width: 5px;
-	margin-left: 45%;
 }
 
-.line_2 {
-	height: 5px;
-	width: 30px;
-	margin-left: 45%;
+.robson .connection .line {
+	height: 153px;
 }
 
-.line_4 {
-	height: 5px;
-	width: 30px;
-	margin-left: 40%;
+.the_image, .the_text, .the_name {
+	display: none;
 }
 
-.dowden 	{
-	background-color: black;
-	font-family: 'Cookie', cursive;
-	font-size: 200%;
-}
+
+
+
 
 .tube_symbol	{
 	height: 100px;
-	margin-top: 10%;
-	margin-right: 2%;
+	margin-right: 10px;
+	vertical-align: middle;
 }
 
 h4	{
-	margin-top: 10%;
-	padding-left: 5%;
-	padding-right: 5%;
-	padding-top: 5%;
+
+	display: inline-block;
+	vertical-align: middle;
 	font-family: 'Oswald', sans-serif;
-	font-size: 250%;
+	font-size: 40px;
+}
+
+.whiteboard {
+	position: relative;
+}
+.whiteboard.fixed {
+	position: fixed;
 }
 
 .whiteboard p {
-	margin-top: 5%;
+	margin-top: 30px;
 	font-family: 'Bad Script', cursive;
-	font-size: 175%;
-	padding-top: 10%;
-	line-height: 130%;
+	font-size: 	28px;
+	line-height: 36px;
 }
 
 .hidden	{
@@ -378,19 +405,18 @@ h4	{
 }
 
 h5	{
-	display: inline;
+	display: block;
 	font-family: 'Cookie', cursive;
 	font-size: 300%;
-	padding: 2%;
-	margin-top: 5%;
+	padding: 0 10px;
+	text-align: center;
 }
 
 .generaltext {
 	font-size: 150%;
 	line-height: 120%;
-	padding-left: 5%;
-	padding-top: 2%;
-	padding-bottom: 2%;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .cartext	{
@@ -458,6 +484,14 @@ h5	{
 	color: gray;
 }
 
+.rsvp {
+	margin-top:30px;
+}
+
+.rsvp h5 {
+	text-align: center;
+}
+
 .rsvp p {
 	text-align: center;
 }
@@ -467,10 +501,13 @@ h5	{
 }
 
 .under_construction	{
-	width: 20%;
-	margin-left: 40%;
-	margin-top: 2%;
-	margin-bottom: 2%;
+	margin-top: 20px;
+	text-align: center;
+	margin-bottom:50px;
+}
+
+.under_construction img	{
+	width: 200px;
 }
 
 footer	{

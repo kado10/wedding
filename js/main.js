@@ -14,25 +14,36 @@
 
 $(function() {
 	$('.circle').mouseover(function() {
-		var cls = $(this).attr('id');
-		$('div.'+ cls).removeClass('hidden');
+		$(".whiteboard").removeClass("hidden");
+		$(".whiteboard > img").attr("src", $(this).parents(".maidens").find(".the_image").html());
+		$(".whiteboard .name").html($(this).parents(".maidens").find(".the_name").html());
+		$(".whiteboard > p").html($(this).parents(".maidens").find(".the_text").html());
+
+		posWhiteboard();
 	})
-	$('.circle').mouseout(function() {
-		var cls = $(this).attr('id');
-		$('div.'+ cls).addClass('hidden');
-	})
+	// $('.circle').mouseout(function() {
+	// 	var cls = $(this).attr('id');
+	// 	$('div.'+ cls).addClass('hidden');
+	// });
+
+	$(window).scroll(function () {
+		posWhiteboard();
+	});
 });
 
-$(function() {
-	$('.circle_2').mouseover(function() {
-		var cls = $(this).attr('id');
-		$('div.'+ cls).removeClass('hidden');
-	})
-	$('.circle_2').mouseout(function() {
-		var cls = $(this).attr('id');
-		$('div.'+ cls).addClass('hidden');
-	})
-})
+function posWhiteboard() {
+	var el = $(".whiteboard:not(.hidden)");
+	if (el.length) {
+		var el_pos = $(".tube.details").offset();
+		var top_space = $("nav").outerHeight() + 20;
+		if ($(window).scrollTop()+top_space > el_pos.top) {
+			el.css("margin-top", (($(window).scrollTop()-el_pos.top)+top_space)+"px");
+		} else {
+			el.css("margin-top", "0px");
+		}
+	}
+
+}
 
 // Initialize and add the map
 function initMap() {
