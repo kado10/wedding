@@ -39,11 +39,20 @@ Developer
   padding: 0 10px 10px 0; /* note the padding around a left floated image */
 }
 
-body {
-	/*background: black;*/
-	background: white;
-	height: 100%;
+html {
 	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+	position: relative;
+}
+body.no_scroll {
+	overflow: hidden;
 }
 
 nav	{
@@ -178,6 +187,7 @@ h2	{
 	width: 145px;
 	height: 145px;
 	margin-top: 8%;
+	background-size: cover;
 }
 
 .tilt_1	{
@@ -199,18 +209,12 @@ h2	{
 }
 
 .ensemble	{
-	display: none;
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
 	padding-bottom: 3%;
 }
 
-@media screen and (min-width: 1400px) {
-	.ensemble.desktop {
-		display: block;
-	}
-}
 
 /*.tube	{
 	float: left;
@@ -220,44 +224,100 @@ h2	{
 .tube	{
 	margin-top: 10px;
 	position: relative;
-	width: 450px;
 	display: inline-block;
 	overflow: hidden;
 	padding-bottom: 70px;
 	vertical-align: top;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
 }
 .tube.details {
+	display: none;
 	width: calc(100% - 917px);
 	height: 905px;
 }
 
+@media screen and (min-width: 500px) {
+}
+
+@media screen and (min-width: 820px) {
+	.tube {
+		width: auto;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.tube {
+		width: 450px;
+		text-align: left;
+	}
+	.tube.details {
+		display: inline-block;
+	}
+}
+
 .title	{
+	display: inline-block;
 	padding: 6px;
-	width: 25%;
 	text-align: center;
 	margin-bottom: 10px;
 	font-size: 40pt;
 	font-family: 'Cookie', cursive;
 }
-.robson .title {
-	width: 200px;
-	margin-left: 106px;
-}
-
 .dowden .title {
-	width: 240px;
 	color: white;
-	margin-left: 84px;
+}
+@media screen and (min-width: 1200px) {
+	.title {
+		width: 25%;
+	}
+	.robson .title {
+		width: 200px;
+		margin-left: 106px;
+	}
+
+	.dowden .title {
+		width: 240px;
+		margin-left: 84px;
+	}
 }
 
 .robson	{
 }
 
 .maidens	{
+	display: inline-block;
 	position: relative;
-	clear: both;
-	height: 120px;
+	height: 200px;
+	width: 100%;
 	z-index: 2;
+}
+
+@media screen and (min-width: 200px) {
+	.maidens {
+		width: 200px;
+	}
+}
+
+@media screen and (min-width: 400px) {
+	.maidens {
+		width: 45%;
+	}
+}
+
+@media screen and (min-width: 820px) {
+	.maidens {
+		width: 400px;
+		height: 120px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.maidens {
+		display: block;
+		height: 120px;
+		width: 100%;
+	}
 }
 
 .grey {
@@ -277,42 +337,89 @@ h2	{
 	cursor: pointer;
 	background-size: cover;
 	background-repeat: no-repeat;
+	left: calc(50% - 50px);
 }
-.robson .circle {
-	left: 233px;
+.circle.grey.active {
+	border: 5px solid silver;
 }
-.dowden .circle	{
-	left: 83px;
+.circle.black.active {
+	border: 5px solid black;
+}
+@media screen and (min-width: 820px) {
+	.maidens .circle {
+		left: auto;
+		right: 40px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.maidens .circle {
+		right: auto;
+	}
+	.robson .circle {
+		left: 233px;
+	}
+	.dowden .circle	{
+		left: 83px;
+	}
 }
 
 .maidens .name {
 	top: calc(50% - 10px);
-	left: 10%;
 	position: absolute;
 	font-family: 'Cookie', cursive;
 	font-size: 20pt;
+	top: 120px;
+	width: 100%;
+	text-align: center;
 }
-.robson .name {
-	left: 20px;
+
+@media screen and (min-width: 820px) {
+	.maidens .name {
+		top: 50px;
+		left: 10%;
+		width: auto;
+		text-align: left;
+	}
 }
-.dowden .name {
-	left: 240px;
+
+@media screen and (min-width: 1200px) {
+	.robson .name {
+		left: 20px;
+	}
+	.dowden .name {
+		left: 240px;
+	}
 }
 
 .connection	{
+	display: none;
 	position: relative;
 	margin-top: -60px;
 }
 
+@media screen and (min-width: 1200px) {
+	.connection {
+		display: block;
+	}
+}
+
 .line {
+	display: none;
 	height: 60px;
 	width: 5px;
 	margin-left: 45%;
 }
 
 .line_h {
+	display: none;
 	height: 5px;
 	width: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+	.line, .line_h {
+		display: block;
+	}
 }
 .robson .line_h {
 	margin-left: 45%;
@@ -339,23 +446,55 @@ h2	{
 
 .tube_symbol	{
 	height: 100px;
-	margin-right: 10px;
 	vertical-align: middle;
+	margin: 0;
 }
 
 h4	{
-
-	display: inline-block;
+	display: block;
 	vertical-align: middle;
 	font-family: 'Oswald', sans-serif;
 	font-size: 40px;
+	text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+	.tube_symbol {
+		margin-left: calc(50% - 70px);
+	}
+}
+@media screen and (min-width: 1400px) {
+	.tube_symbol {
+		/*display: inline-block;*/
+		margin: 0;
+		margin-right: 10px;
+	}
+	h4	{
+		display: inline-block;
+		text-align: left;
+	}
 }
 
 .whiteboard {
 	position: relative;
 }
-.whiteboard.fixed {
-	position: fixed;
+
+.mobile_whiteboard {
+	background-color: #efefef;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-bottom: 20px;
+}
+.mobile_whiteboard_wrapper {
+	display: none;
+}
+
+@media screen and (min-width: 1200px) {
+	.mobile_whiteboard_wrapper {
+		display: none;
+	}
 }
 
 .whiteboard p {
