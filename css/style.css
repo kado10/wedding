@@ -65,18 +65,19 @@ nav	{
 	top: 0;
 	width: 100%;
 	z-index: 99;
+	overflow-y: scroll;
 }
 
 nav ul {
 	display: flex;
 	list-style: none;
+	text-align: center;
 }
 
 nav ul li{
 	width:16.667%;
 	font-family: 'Pacifico', cursive;
-	padding-left: 5%;
-	padding-top: 1%;
+	padding-top: 5px;
 }
 
 nav ul li a {
@@ -85,8 +86,37 @@ nav ul li a {
 }
 
 nav ul li a img {
-	height:40%;
+	height:15px;
 }
+
+@media screen and (max-width: 670px) {
+	nav ul li a img {
+		display:none;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	nav ul li:first-of-type {
+		display:none;
+	}
+	nav ul li {
+		width: 20%;
+	}
+}
+
+@media screen and (max-width: 372px) {
+	nav ul li:last-of-type{
+		display:none;
+	}
+	nav ul li {
+		width: 25%;
+		font-size: 10px;
+	}
+
+
+}
+
+
 
 .heading	{
 	padding-top: 200px;
@@ -556,42 +586,156 @@ h5	{
 	line-height: 120%;
 	padding-left: 10px;
 	padding-right: 10px;
+	margin-bottom: 20px;
 }
 
-.cartext	{
-	padding-top: 1%;
-	padding-bottom: 1%;
-	padding-left: 1%;
-	font-size: 150%;
+.cartext > div	{
+	display: inline-block;
+	vertical-align: top;
 }
+
+.cartext > div:first-of-type	{
+	width: 10%;
+	text-align: center;
+}
+
+.cartext > div:last-of-type	{
+	width: 75%;
+	text-align: left;
+}
+
+.taxitext > div	{
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.taxitext > div:first-of-type	{
+	width: 10%;
+	text-align: center;
+}
+
+.taxitext > div:last-of-type	{
+	width: 75%;
+	text-align: left;
+}
+
+.traintext > div	{
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.traintext > div:first-of-type	{
+	width: 10%;
+	text-align: center;
+}
+
+.traintext > div:last-of-type	{
+	width: 75%;
+	text-align: left;
+}
+
+.bustext > div	{
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.bustext > div:first-of-type	{
+	width: 10%;
+	text-align: center;
+}
+
+.bustext > div:last-of-type	{
+	width: 75%;
+	text-align: left;
+}
+
+.boattext > div	{
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.boattext > div:first-of-type	{
+	width: 10%;
+	text-align: center;
+}
+
+.boattext > div:last-of-type	{
+	width: 75%;
+	text-align: left;
+}
+
 
 .adress 	{
 	text-align: center;
 	font-size: 175%;
 	padding-top: 2%;
 }
-.car {
-	height:40px;
+
+@media screen and (max-width: 600px) {
+	.car {
+	display: none;
 }
 
 .bus {
-	height:30px;
-	padding-left: 5%;
+	display: none;
 }
 
 .train {
-	height:30px;
-	padding-left: 5%;
+	display: none;
 }
 
 .taxi {
-	height:30px;
-	padding-left: 5%;
+	display: none;
 }
 
 .boat {
-	height:30px;
-	padding-left: 5%;
+	display: none;
+}
+
+.hotel {
+	display: none;
+}
+
+.generaltext {
+	font-size: 100%;
+	line-height: 100%;
+}
+
+}
+
+.car {
+	width:60px;
+	
+}
+
+
+
+.bus {
+	width: 60px;
+	padding-left: 10px;
+}
+
+.train {
+	width:60px;
+	padding-left: 10px;
+}
+
+.taxi {
+	width:60px;
+	padding-left: 10px;
+}
+
+.boat {
+	height:60px;
+	padding-left: 10px;
 }
 
 .transport {
@@ -608,10 +752,26 @@ h5	{
 	width: 100%;
 	height: 400px;
 }
+.hoteltext > div	{
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.hoteltext > div:first-of-type	{
+	width: 10%;
+	text-align: center;
+}
+
+.hoteltext > div:last-of-type	{
+	width: 75%;
+	text-align: left;
+}
 
 .hotel {
-	height:30px;
-	padding-left: 5%;
+	width:60px;
+	padding-left: 10px;
 }
 
 .accomodation ul 	{
@@ -621,6 +781,17 @@ h5	{
 
 .accomodation a 	{
 	color: gray;
+}
+
+.accomodation p {
+	text-align: center;
+}
+.accomodation	{
+	margin-top: 30px;
+}
+
+.gifts p {
+	text-align: center;
 }
 
 .rsvp {
@@ -653,7 +824,7 @@ footer	{
 	height: 150px;
 	background-image: url(../images/footer.png);
 	background-repeat: repeat-x;
-	background-size: 33.33% 100%;
+	background-size: contain;
 	width: 100%;
 }
 
