@@ -70,7 +70,7 @@ $(function() {
 
 	function doWindowResize() {
 
-		console.log("resze");
+		console.log("resize");
 
 
 		// Reset all whiteboard elements to hidden
@@ -205,5 +205,20 @@ function initMap() {
 
 
 
-    
-  
+
+
+// fire off the request to /form.php
+       // request = $.ajax({
+         //   url: "https://script.google.com/macros/s/AKfycbzXVwvl3BUdy60Yi3QsPj7NnNuv6fgI07cEqFL59wDla9VZ-T8/exec",
+           // type: "post",
+            //data: serializedData
+       // });
+
+
+  function openForm() {
+  document.getElementById("myForm").style.display = "block";
+ }
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}

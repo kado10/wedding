@@ -4,17 +4,96 @@
 		<div class=rsvp>
 			<h3>RSVP</h3>
 			<p>
-			Name: <input type="text" name="name" value="Your First Name here please">
+			Name: <input type="text" name="Name" value="Your Name">
 			</p>
 			<p>
-			First initial of surname: <input type="text" name="inital" value="The first letter of your surname here please">
+			Email: <input type="Email" name="Email" value="Your email">
 			</p>
 			<p>
 			Are you able to attend the wedding?
-			 <input type="radio" name="rsvp" value="yes"> Yes
-			 <input type="radio" name="rsvp" value="no"> No
-			 <input type="radio" name="rsvp" value="maybe"> Maybe
+			 <input type="radio" name="RSVP" value="yes"> Yes
+			 <input type="radio" name="RSVP" value="no"> No
+			</p>
+			<p>
+			What would you like for your starter?
+			 <input type="radio" name="Starter" value="Meat"> Meat
+			 <input type="radio" name="Starter" value="Vegan"> Vegan
+			</p>
+			<p>
+			What would you like for your main?
+			 <input type="radio" name="Main" value="Meat"> Meat
+			 <input type="radio" name="Main" value="Vegan"> Vegan
+			</p>
+			<p>
+			What would you like for your desert?
+			 <input type="radio" name="Desert" value="Non-vegan"> Non-vegan
+			 <input type="radio" name="Desert" value="Vegan"> Vegan
+			</p>
+			<p>
+			Do you have any dietary requirements? <input type="text" name="Dietary requirements" value="Please provide more detail">
+			</p>
+			<p>
+			Any song requests? (please note that we reserve the right to reject any choices which reflect poor music taste) <input type="text" name="Song" value="Song request....go on... we won't judge you">
 			</p>
 			<input type="submit" name="submit" value="Submit"
 		</div>
 	</form>
+
+	// Variable to hold request
+var request;
+
+$("#invitation_response").submit(function(event){
+
+    // Prevent default posting of form - put here to work in case of errors
+    event.preventDefault();
+
+    // Abort any pending request
+    if (request) {
+        request.abort();
+    }
+    // setup some local variables
+    var $form = $(this);
+
+    // Let's select and cache all the fields
+    var $inputs = $form.find("input, select, button, textarea");
+
+    // Serialize the data in the form
+    var serializedData = $form.serialize();
+
+    // Let's disable the inputs for the duration of the Ajax request.
+    // Note: we disable elements AFTER the form data has been serialized.
+    // Disabled form elements will not be serialized.
+    $inputs.prop("disabled", true);
+
+    // Fire off the request to /form.php
+    request = $.ajax({
+        url: "https://script.google.com/macros/s/AKfycbzXVwvl3BUdy60Yi3QsPj7NnNuv6fgI07cEqFL59wDla9VZ-T8/exec",
+        type: "post",
+        data: serializedData
+    });
+
+    // Callback handler that will be called on success
+    request.done(function (response, textStatus, jqXHR){
+        // Log a message to the console
+        console.log("Hooray, it worked!");
+    });
+
+    // Callback handler that will be called on failure
+    request.fail(function (jqXHR, textStatus, errorThrown){
+        // Log the error to the console
+        console.error(
+            "The following error occurred: "+
+            textStatus, errorThrown
+        );
+    });
+
+    // Callback handler that will be called regardless
+    // if the request failed or succeeded
+    request.always(function () {
+        // Reenable the inputs
+        $inputs.prop("disabled", false);
+    });
+
+});
+
+	https://script.google.com/macros/s/AKfycbzXVwvl3BUdy60Yi3QsPj7NnNuv6fgI07cEqFL59wDla9VZ-T8/exec

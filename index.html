@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Katie and Lucy</title>
+		<title>Katie and Lucy Wedding</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name ="keywords" content="wedding, katie and lucy, dickens inn">
+		<meta name ="keywords" content=" katie and lucy wedding">
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Cookie|Pacifico" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Caveat|Itim|Oswald|Rock+Salt" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Bad+Script|Open+Sans+Condensed:300|Yellowtail" rel="stylesheet">
+		<link rel="icon" href="images/icon_v2.gif" sizes="16x16">
 	</head>
 	<body>
 		<!-- Notes: I have put your navigation into the 'header' html5 element. It's all about structure :) -->
@@ -93,6 +94,49 @@
 			<div id=rsvp></div>
 			<div class=rsvp>
 				<h5>RSVP</h5>
+	<button class="open-button" onclick="openForm()">Open Form</button>
+<div class="form-popup" id="myForm">
+	<form  action="https://formspree.io/dowden123@hotmail.com", method="POST" class="form-container">
+		<div class=rsvp>
+			<p>
+			Name: <input type="text" name="Name" value="Your Name">
+			</p>
+			<p>
+			Email: <input type="Email" name="Email" value="Your email">
+			</p>
+			<p>
+			Are you able to attend the wedding?
+			 <input type="radio" name="Response" value="yes"> Yes
+			 <input type="radio" name="Response" value="no"> No
+			</p>
+			<p>
+			What would you like for your starter?
+			 <input type="radio" name="Starter" value="Meat"> Meat
+			 <input type="radio" name="Starter" value="Vegan"> Vegan
+			</p>
+			<p>
+			What would you like for your main?
+			 <input type="radio" name="Main" value="Meat"> Meat
+			 <input type="radio" name="Main" value="Vegan"> Vegan
+			</p>
+			<p>
+			What would you like for your desert?
+			 <input type="radio" name="Desert" value="Non-vegan"> Non-vegan
+			 <input type="radio" name="Desert" value="Vegan"> Vegan
+			</p>
+			<p>
+			Do you have any dietary requirements? <input type="text" name="Dietary requirements" value="Please provide more detail">
+			</p>
+			<p>
+			Any song requests? (please note that we reserve the right to reject any choices which reflect poor music taste) <input type="text" name="Song" value="Song request....go on... we won't judge you">
+			</p>
+			<input type="submit" name="submit" value="Submit"
+			class="btn cancel" onclick="closeform()"></button>
+		</div>
+	</form>
+</div>
+
+
 				<p class=generaltext>We’re still working on this section. Check back after you have received your invitation!
 				<br> However, if you <span>have</span> received your <span>'save the date'</span> and already know you <span>can’t</span> make it, please contact us as soon as possible.</p>
 				<div class="under_construction">
@@ -289,12 +333,12 @@
 					<div><span><a href="https://www.travelodge.co.uk/hotels/355/London-Central-Aldgate-East-hotel">Travelodge London Central Aldgate East Hotel</a> - £69. 3-star hotel with dining and bar. </span></div> </li>
 					<li class=hoteltext><div><img class=hotel src="images/hotel.png"></div>
 					<div><span><a href="https://www.travelodge.co.uk/hotels/391/London-Central-Tower-Bridge-hotel">Travelodge London Central Tower Bridge </a> - £79. 3-star hotel with dining and bar.</span></div> </li>
-					<li class=hoteltext><div><img class=hotel src="images/hotel.png"></div><div><span><a href="https://www.guoman.com/en/london/the-tower/rooms-and-suites.html">The Tower Hotel </a> - £82. 4-star riverside hotel.</span></div></li>
+					<li class=hoteltext><div><img class=hotel src="images/hotel.png"></div><div><span><a href="https://www.guoman.com/en/london/the-tower/rooms-and-suites.html"> The Tower Hotel </a> - £82. 4-star riverside hotel.</span></div></li>
 					<li class=hoteltext>
-						<div><img class=hotel src="images/hotel.png"></div><div><span><a href="https://www.premierinn.com/gb/en/hotels/england/greater-london/london/london-city-tower-hill.html">Premier Inn London City Tower Hill </a> - £103. 3-star hotel. </span></div></li>	
-					<li class=hoteltext><div><img class=hotel src="images/hotel.png"></div><div><span><a href="https://www.grangehotels.com/hotels-london/grange-tower-bridge/">Grange Tower Bridge Hotel </a> - £122. 5-star hotel with pool and dining. </span></div></li>
-					<li class=hoteltext><div><img class=hotel src="images/hotel.png"></div> <div><span><a href="https://www3.hilton.com/en/hotels/united-kingdom/hilton-london-tower-bridge-LONTBHI/index.html">Hilton London Tower Bridge  </a> - £127. 4-star hotel with Italian dining.</span></div></li>
-					<li class=hoteltext><div><img class=hotel src="images/hotel.png"></div><div><span><a href="https://www.thelalit.com/the-lalit-london/">The Lalit London </a> - £145. 5-star hotel with Indian Restaurant. </span></div></li>
+						<div><img class=hotel src="images/hotel.png"></div><div><span><a href="https://www.premierinn.com/gb/en/hotels/england/greater-london/london/london-city-tower-hill.html"> Premier Inn London City Tower Hill </a> - £103. 3-star hotel. </span></div></li>	
+					<li class=hoteltext><div><img class=hotel src="images/hotel.png"></div><div><span><a href="https://www.grangehotels.com/hotels-london/grange-tower-bridge/"> Grange Tower Bridge Hotel </a> - £122. 5-star hotel with pool and dining. </span></div></li>
+					<li class=hoteltext><div><img class=hotel src="images/hotel.png"></div><div><span><a href="https://www3.hilton.com/en/hotels/united-kingdom/hilton-london-tower-bridge-LONTBHI/index.html"> Hilton London Tower Bridge  </a> - £127. 4-star hotel with Italian dining.</span></div></li>
+					<li class=hoteltext><div><img class=hotel src="images/hotel.png"></div><div><span><a href="https://www.thelalit.com/the-lalit-london/"> The Lalit London </a> - £145. 5-star hotel with Indian Restaurant. </span></div></li>
 					<li class=hoteltext><div><img class=hotel src="images/hotel.png"></div> <div><span><a href="https://www.chevalresidences.com/cheval-three-quays/">Cheval Three Quays </a> - £204. 5-star hotel overlooking the river. </span></div> </li>		
 				</ul> 
 				</div>
