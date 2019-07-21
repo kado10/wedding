@@ -46,7 +46,7 @@ $(function() {
 	});
 
 	var resize_interval = null;
-	var last_size = 0;
+	var last_size = $("body").width();
 	$(window).resize(function () {
 
 		last_size = $("body").width();
@@ -61,7 +61,7 @@ $(function() {
 		resize_interval = setTimeout(function() {
 			resize_interval = null;
 
-			if ($("body").width() != body_width) {
+			if ($("body").width() != last_size) {
 				doWindowResize();
 			}
 
@@ -80,7 +80,7 @@ $(function() {
 		});
 
 		setTimeout(function() {
-			$("body").addClass("no_scroll");
+			$("body").removeClass("no_scroll");
 			applyCircleData();
 
 		}, 300); // Timeout for the slide up animation
@@ -216,9 +216,10 @@ function initMap() {
 
 
   function openForm() {
-  document.getElementById("myForm").style.display = "block";
+	$("#myForm").css("display", "flex");
  }
 
 function closeForm() {
-  document.getElementById("myForm").style.display = "none";
+	$("#myForm").hide();
+	return false;
 }

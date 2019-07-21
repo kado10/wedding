@@ -94,49 +94,7 @@
 			<div id=rsvp></div>
 			<div class=rsvp>
 				<h5>RSVP</h5>
-	<button class="open-button" onclick="openForm()">Open Form</button>
-<div class="form-popup" id="myForm">
-	<form  action="https://formspree.io/dowden123@hotmail.com", method="POST" class="form-container">
-		<div class=rsvp>
-			<p>
-			Name: <input type="text" name="Name" value="Your Name">
-			</p>
-			<p>
-			Email: <input type="Email" name="Email" value="Your email">
-			</p>
-			<p>
-			Are you able to attend the wedding?
-			 <input type="radio" name="Response" value="yes"> Yes
-			 <input type="radio" name="Response" value="no"> No
-			</p>
-			<p>
-			What would you like for your starter?
-			 <input type="radio" name="Starter" value="Meat"> Meat
-			 <input type="radio" name="Starter" value="Vegan"> Vegan
-			</p>
-			<p>
-			What would you like for your main?
-			 <input type="radio" name="Main" value="Meat"> Meat
-			 <input type="radio" name="Main" value="Vegan"> Vegan
-			</p>
-			<p>
-			What would you like for your desert?
-			 <input type="radio" name="Desert" value="Non-vegan"> Non-vegan
-			 <input type="radio" name="Desert" value="Vegan"> Vegan
-			</p>
-			<p>
-			Do you have any dietary requirements? <input type="text" name="Dietary requirements" value="Please provide more detail">
-			</p>
-			<p>
-			Any song requests? (please note that we reserve the right to reject any choices which reflect poor music taste) <input type="text" name="Song" value="Song request....go on... we won't judge you">
-			</p>
-			<input type="submit" name="submit" value="Submit"
-			class="btn cancel" onclick="closeform()"></button>
-		</div>
-	</form>
-</div>
-
-
+				<button class="open-button" onclick="openForm()">Open Form</button>
 				<p class=generaltext>We’re still working on this section. Check back after you have received your invitation!
 				<br> However, if you <span>have</span> received your <span>'save the date'</span> and already know you <span>can’t</span> make it, please contact us as soon as possible.</p>
 				<div class="under_construction">
@@ -357,6 +315,50 @@
 
 		<!-- Notes: Your footer should be inside the body tag -->
 		<footer></footer>
+
+
+		<div class="form-popup flex-container" id="myForm">
+			<form  action="https://formspree.io/dowden123@hotmail.com", method="POST" class="form-container">
+				<div class="form-title">RSVP Details</div>
+				<button class="close-btn" title="Close" onclick="return closeForm()">&times;</button>
+				<div class=rsvp>
+					<p>
+					Name: <input type="text" name="Name" placeholder="Your Name">
+					</p>
+					<p>
+					Email: <input type="Email" name="Email" placeholder="Your email">
+					</p>
+					<p>
+					Are you able to attend the wedding?
+					 <input type="radio" name="Response" value="yes"> Yes
+					 <input type="radio" name="Response" value="no"> No
+					</p>
+					<p>
+					What would you like for your starter?
+					 <input type="radio" name="Starter" value="Meat"> Meat
+					 <input type="radio" name="Starter" value="Vegan"> Vegan
+					</p>
+					<p>
+					What would you like for your main?
+					 <input type="radio" name="Main" value="Meat"> Meat
+					 <input type="radio" name="Main" value="Vegan"> Vegan
+					</p>
+					<p>
+					What would you like for your desert?
+					 <input type="radio" name="Desert" value="Non-vegan"> Non-vegan
+					 <input type="radio" name="Desert" value="Vegan"> Vegan
+					</p>
+					<p>
+					Do you have any dietary requirements? <input type="text" name="Dietary requirements" placeholder="Please provide more detail">
+					</p>
+					<p>
+					Any song requests? (please note that we reserve the right to reject any choices which reflect poor music taste) <input type="text" name="Song" placeholder="Song request....go on... we won't judge you">
+					</p>
+					<input type="submit" name="submit" value="Submit"
+					class="btn cancel" onclick="closeform()"></button>
+				</div>
+			</form>
+		</div>
 
 
 		<!-- Notes: Same with scripts. The script will be loaded when it is done rendering the above elements. That's a good thing for optimisation. -->
