@@ -732,6 +732,11 @@ input[type=text] {
 	margin-top: -200px;
 }
 
+.gifts span	{
+	font-family: 'Cookie', cursive;
+	font-size: 150%;
+}
+
 h5	{
 	display: block;
 	font-family: 'Cookie', cursive;
