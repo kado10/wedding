@@ -74,7 +74,7 @@ nav ul {
 }
 
 nav ul li{
-	width:16.667%;
+	width:12.5%;
 	font-family: 'Pacifico', cursive;
 	padding-top: 5px;
 }
@@ -732,9 +732,22 @@ input[type=text] {
 	margin-top: -200px;
 }
 
-.gifts span	{
+#dress_code	{
+	display: block;
+	height:200px;
+	visibility: hidden;
+	margin-top: -200px;
+}
+
+.gifts span, .dress_code span, .time	{
 	font-family: 'Cookie', cursive;
 	font-size: 150%;
+	font-weight: bold;
+}
+
+tr {
+	margin-left: 100px
+	padding-top: 75px;
 }
 
 h5	{
@@ -954,7 +967,12 @@ h5	{
 	margin-top: 30px;
 }
 
+
 .gifts p {
+	text-align: center;
+}
+
+.dress_code p {
 	text-align: center;
 }
 
@@ -966,6 +984,15 @@ h5	{
 	text-align: center;
 }
 
+table {
+	width: 100%
+}
+
+.time {
+	padding-left: 150px;
+	text-align: right;
+	padding-right: 50px;
+}
 
 .rsvp span 	{
 	font-weight: bold;
